@@ -20,6 +20,7 @@ export default defineConfig({
       $styles: resolve('src/styles/app.scss'),
       $lib: resolve('src/lib'),
       $src: resolve('src/'),
+      $types: resolve('src/types.ts'),
     },
   },
   publicDir: 'static',
