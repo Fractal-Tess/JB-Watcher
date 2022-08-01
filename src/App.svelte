@@ -10,11 +10,11 @@
   import { Route } from 'tinro';
   import Transition from '$lib/animation/Transition.svelte';
   import { user } from '$lib/stores/user';
-import TopBar from '$lib/components/topbar/TopBar.svelte';
+  import TopBar from '$lib/components/topbar/TopBar.svelte';
 </script>
 
 <BaseWrapper>
-  <TopBar/>
+  <TopBar />
   {#if $user}
     <Sidebar />
     <nav>
