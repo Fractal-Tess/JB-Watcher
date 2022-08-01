@@ -3,10 +3,8 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { resolve } from 'node:path';
 
 export default defineConfig({
-  // Svelte
   plugins: [svelte()],
 
-  // Inject style variables
   css: {
     preprocessorOptions: {
       scss: {
@@ -18,12 +16,14 @@ export default defineConfig({
   resolve: {
     alias: {
       $styles: resolve('src/styles/app.scss'),
-      $lib: resolve('src/lib'),
+      $lib: resolve('src/lib/'),
       $src: resolve('src/'),
-      $types: resolve('src/types.ts')
+      $types: resolve('src/types.ts'),
+      $assets: resolve('src/assets/')
     }
   },
-  publicDir: 'static',
+
+  publicDir: false,
 
   clearScreen: false,
   server: {

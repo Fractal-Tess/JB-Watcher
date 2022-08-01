@@ -15,7 +15,9 @@
       "$styles": ["src/styles/app.scss"],
       "$types": ["src/types.ts"],
       "$src": ["src/"],
-      "$src/*": ["src/*"]
+      "$src/*": ["src/*"],
+      "$assets": ["src/assets"],
+      "$assets/*": ["src/assets/*"]
     },
     "typeRoots": ["src/global.d.ts"],
 
