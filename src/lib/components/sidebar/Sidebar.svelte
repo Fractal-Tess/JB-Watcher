@@ -1,12 +1,12 @@
 <script lang="ts">
-  import ThemeToggleIcon from '$lib/example/header/ThemeToggleIcon.svelte';
+  import ThemeToggleIcon from '$lib/components/theme/ThemeToggleIcon.svelte';
   import { theme } from '$lib/stores/theme';
   import { appWindow } from '@tauri-apps/api/window';
 </script>
 
 <div
   data-tauri-drag-region
-  class="h-12 bg-base-100 shadow-lg items-center justify-between flex"
+  class="h-12 bg-base-100 shadow-lg items-center justify-between flex "
 >
   <button
     on:click={theme.toggleTheme}

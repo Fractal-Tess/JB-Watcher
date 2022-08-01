@@ -10,9 +10,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "src/styles/variables.scss" as *;',
-      },
-    },
+        additionalData: '@use "src/styles/variables.scss" as *;'
+      }
+    }
   },
 
   resolve: {
@@ -20,20 +20,20 @@ export default defineConfig({
       $styles: resolve('src/styles/app.scss'),
       $lib: resolve('src/lib'),
       $src: resolve('src/'),
-      $types: resolve('src/types.ts'),
-    },
+      $types: resolve('src/types.ts')
+    }
   },
   publicDir: 'static',
 
   clearScreen: false,
   server: {
     strictPort: true,
-    port: 3000,
+    port: 3000
   },
   envPrefix: ['VITE_', 'TAURI_'],
   build: {
     target: ['es2021', 'chrome100', 'safari13'],
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
-    sourcemap: !!process.env.TAURI_DEBUG,
-  },
+    sourcemap: !!process.env.TAURI_DEBUG
+  }
 });

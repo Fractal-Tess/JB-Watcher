@@ -10,7 +10,7 @@ const createThemeStore = () => {
   return {
     subscribe,
     toggleTheme: () => {
-      update((currentTheme) => {
+      update(currentTheme => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         store.set('theme', newTheme);
         return newTheme;
@@ -23,7 +23,7 @@ const createThemeStore = () => {
         store.set('theme', storedTheme);
       }
       set(storedTheme);
-    },
+    }
   };
 };
 export const theme = createThemeStore();

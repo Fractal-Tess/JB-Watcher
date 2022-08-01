@@ -1,27 +1,19 @@
 <script lang="ts">
-  // Static
-  import Header from '$lib/example/header/Header.svelte';
-  import Footer from '$lib/example/footer/Footer.svelte';
-  // Dynamic
+  //Components
+  import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
+  //Routes
   import Register from '$lib/routes/Register.svelte';
   import Settings from '$lib/routes/Settings.svelte';
   import Login from '$lib/routes/Login.svelte';
   import Home from '$lib/routes/Home.svelte';
   // Extra
-  import Transition from '$lib/animation/Transition.svelte';
+  import BaseWrapper from '$lib/components/BaseWrapper.svelte';
   import { Route } from 'tinro';
-  import { theme } from '$lib/stores/theme';
-
-  $: {
-    document.documentElement.setAttribute('data-theme', $theme);
-    document.documentElement.classList.value = $theme;
-  }
+  import Transition from '$lib/animation/Transition.svelte';
 </script>
 
-<div
-  class="bg-base-100 text-base-content h-screen flex flex-col overflow-y-auto overflow-x-hidden"
->
-  <Header />
+<BaseWrapper>
+  <Sidebar />
   <nav>
     <a href="/">Home</a>
     <a href="/login">login</a>
@@ -35,5 +27,4 @@
     <Route path="/register"><Register /></Route>
     <Route path="/settings"><Settings /></Route>
   </Transition>
-  <Footer />
-</div>
+</BaseWrapper>
